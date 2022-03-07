@@ -1,0 +1,70 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div {
+    text-align: center;
+}
+
+#content {
+    margin-top: 10px;
+    background-color: rgba(179, 176, 176, 0.432);
+    max-width: 500px;
+    padding: 30px;
+}
+
+#content h2 {
+    font-size: 23px;
+}
+
+button {
+    margin-top: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#numeros {
+    display: none;
+    margin-top: 10px;
+    background-color: rgba(179, 176, 176, 0.432);
+    max-width: 500px;
+    padding: 30px;
+    font-size: 14px;
+}
+
+#numeros input {
+    width: 200px;
+    margin-top: 5px;
+}
+
+#nSorteado {
+    margin-top: 5px;
+    display: none;
+}
+
+#pessoas {
+    display: none;
+    margin-top: 10px;
+    background-color: rgba(179, 176, 176, 0.432);
+    max-width: 500px;
+    padding: 30px;
+    font-size: 14px;
+}
+
+#pessoas input {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#pessoas button {
+    padding: 13px; 
+}
+
+#pSorteado {
+    margin-top: 5px;
+    display: none;
+}
