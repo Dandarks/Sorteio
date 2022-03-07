@@ -38,11 +38,16 @@ function adicionar(){
 }
 
 function sortearPessoas (){
-    let np = nomes.length;
-    let ps = Math.floor(Math.random() * np);
+    if (nomes == ""){
+        alert("Insira pelo menos 2 nomes");
+        document.getElementById("pSorteado").style.display = "none";      
+    } else {
+        let np = nomes.length;
+        let ps = Math.floor(Math.random() * np);
 
-    document.getElementById("pSorteado").style.display = "block";
-    document.getElementById("pS").innerHTML = nomes[ps];
+        document.getElementById("pSorteado").style.display = "block";
+        document.getElementById("pS").innerHTML = nomes[ps];
+    }
 }
 
 function limpar () {
