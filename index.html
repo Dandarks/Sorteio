@@ -9,14 +9,14 @@
 </head>
 <body>
     <div id="content">
-        <h2>Deseja sortear números ou pessoas?</h2>
+        <h2>Tipo de Sorteio:</h2>
         <button onclick="numeros()">Números</button>
-        <button onclick="pessoas()">Pessoas</button>
+        <button onclick="pessoas()">Nomes</button>
     </div>
 
     <div id="numeros">
-        <h2>Qual a quantidade de números que deseja sortear?</h2>
-        <input id="qtd" type="number" placeholder="Quantidade de Números"></br>
+        <h2>Número máximo a ser sorteado:</h2>
+        <input id="qtd" type="number" placeholder="Número máximo a ser sorteado"></br>
         <button onclick="sortearNumeros()">Sortear</button>
         <div id="nSorteado">
             <h2>Número Sorteado: </h2>
@@ -26,10 +26,12 @@
     </div>
 
     <div id="pessoas">
-        <h2>Digite os nomes dos participantes. </br>Obs: Um de cada vez</h2>
+        <h2>Nomes dos participantes</h2>
+        <span id="obs">Obs: Um de cada vez</span></br>
         <input type="text" id="names" placeholder="Nomes"></br>
-        <button onclick="adicionar()">Adicionar</button>
+        <button id="add" onclick="adicionar()">Adicionar</button>
         <button onclick="sortearPessoas()">Sortear</button>
+        <ol id="listp"></ol>
         
         <div id="pSorteado">
             <h2>Pessoa Sorteada: </h2>
