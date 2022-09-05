@@ -1,5 +1,6 @@
 var number = document.getElementById("numeros");
 var people = document.getElementById("pessoas");
+var nomes = [];
 
 function numeros () {
     document.getElementById("nSorteado").style.display = "none";
@@ -7,17 +8,25 @@ function numeros () {
 
     if (people.style.display == "block"){
         people.style.display = "none";
+        qtd.value = "";
     }
     number.style.display = "block";
+    nomes = [];
+    document.getElementById("listp").innerHTML = "";
+
 }
 
 function sortearNumeros () {
-    let n = document.getElementById("qtd").value;
-    document.getElementById("qtd").value = "";
-    let ns = Math.round(Math.random() * n);
+    var qtd = document.getElementById("qtd");
+    if (qtd.value == ""){
+        alert("Digite um número");
+    } else {
+        let n = qtd.value;
+        let ns = Math.round(Math.random() * n);
 
-    document.getElementById("nSorteado").style.display = "block";
-    document.getElementById("h3").innerHTML = ns;
+        document.getElementById("nSorteado").style.display = "block";
+        document.getElementById("h3").innerHTML = ns;
+        }
 }
 
 function pessoas () {
@@ -30,11 +39,22 @@ function pessoas () {
     document.getElementById("pessoas").style.display = "block";
 }
 
-var nomes = [];
+document.addEventListener("keypress", function(e){
+    if (e.key === "Enter"){
+        const btn = document.querySelector("#add");
+        btn.click();
+    }
+})
 
 function adicionar(){
-    nomes.push(document.getElementById("names").value);
-    document.getElementById("names").value = "";
+    var name = document.getElementById("names");
+    if (name.value == ""){
+        alert("Digite um nome válido!")
+    } else {
+        nomes.push(name.value);
+        document.getElementById("listp").innerHTML += `<li>${name.value}</li>`;
+        name.value = "";
+    }
 }
 
 function sortearPessoas (){
@@ -53,4 +73,5 @@ function sortearPessoas (){
 function limpar () {
     nomes = [];
     document.getElementById("pSorteado").style.display = "none";
+    document.getElementById("listp").innerHTML = "";
 }
