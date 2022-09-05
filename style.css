@@ -2,10 +2,25 @@
     margin: 0 auto;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    border: 0.1px;
+    outline: none;
+}
+
+ol {
+    margin-top: 2px;
+}
+
+body {
+    background-color: rgba(114, 114, 114, 0.514);
 }
 
 div {
     text-align: center;
+}
+
+span#obs {
+    font-size: 15px;
 }
 
 #content {
@@ -13,16 +28,22 @@ div {
     background-color: rgba(179, 176, 176, 0.432);
     max-width: 500px;
     padding: 30px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.295);
 }
 
 #content h2 {
-    font-size: 23px;
+    font-size: 20px;
 }
 
 button {
     margin-top: 5px;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: rgb(192, 192, 192);
 }
 
 #numeros {
@@ -32,10 +53,12 @@ button {
     max-width: 500px;
     padding: 30px;
     font-size: 14px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.295);
 }
 
 #numeros input {
     width: 200px;
+    padding: 5px;
     margin-top: 5px;
 }
 
@@ -51,6 +74,7 @@ button {
     max-width: 500px;
     padding: 30px;
     font-size: 14px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.295);
 }
 
 #pessoas input {
